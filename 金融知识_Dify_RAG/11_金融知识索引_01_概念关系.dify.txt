@@ -1,38 +1,36 @@
----
+<<<DIFY_PARENT>>>
+
 title: 金融知识概念关系
 category: 金融知识索引
 document_type: concept_relations
 version: 1.0
 language: zh-CN
 purpose: 定义金融知识库中核心概念之间的分析关系、关系方向、使用场景和知识边界
----
 
-#  金融知识概念关系
+金融知识概念关系
 
-##  1. 文档定位
+<<<DIFY_PARENT>>>
+
+1. 文档定位
 
 本文用于定义金融知识库中不同知识概念之间的关系。
 
 本文重点回答：
 
-> “A 和 B 为什么需要放在一起分析？”
+“A 和 B 为什么需要放在一起分析？”
 
 本文不负责：
 
-- 详细解释单个金融概念
-- 给出具体公司的投资结论
-- 预测股票价格
-- 替代具体金融知识文件
+详细解释单个金融概念给出具体公司的投资结论预测股票价格替代具体金融知识文件
 
 当需要理解某个概念的详细定义、公式、计算方法和具体判断规则时，应优先检索对应的金融知识文件。
 
----
+<<<DIFY_PARENT>>>
 
-##  2. 关系模型
+2. 关系模型
 
 本知识库使用以下关系模型描述金融概念之间的关联：
 
-```text
 source
 target
 relation
@@ -40,167 +38,156 @@ direction
 meaning
 usage
 caution
-```
 
 含义如下：
 
-| 字段        | 含义          |
+| 字段 | 含义 |
 | --------- | ----------- |
-| source    | 起始概念        |
-| target    | 关联概念        |
-| relation  | 两个概念之间的关系类型 |
-| direction | 分析方向        |
-| meaning   | 关系具体含义      |
-| usage     | 什么时候使用这个关系  |
-| caution   | 使用时需要避免的错误  |
+| source | 起始概念 |
+| target | 关联概念 |
+| relation | 两个概念之间的关系类型 |
+| direction | 分析方向 |
+| meaning | 关系具体含义 |
+| usage | 什么时候使用这个关系 |
+| caution | 使用时需要避免的错误 |
 
 重要规则：
 
-> `source → target` 表示分析关联方向，不自动表示因果关系。
+source → target 表示分析关联方向，不自动表示因果关系。
 
 例如：
 
-```text
 ROE → PB
-```
 
 表示：
 
-> 分析PB时可以参考ROE。
+分析PB时可以参考ROE。
 
 不表示：
 
-> ROE变化必然导致PB变化。
+ROE变化必然导致PB变化。
 
----
+<<<DIFY_PARENT>>>
 
-##  3. 关系类型
+3. 关系类型
 
 当前知识库主要使用以下关系类型。
 
-###  3.1 定义关系
+<<<DIFY_CHILD>>>
+
+3.1 定义关系
 
 用于表示：
 
-> 一个概念用于解释另一个概念的组成或含义。
+一个概念用于解释另一个概念的组成或含义。
 
 示例：
 
-```text
 ROE → 资本回报能力
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  3.2 估值关联
+3.2 估值关联
 
 用于表示：
 
-> 某个企业指标可以帮助解释某个估值指标。
+某个企业指标可以帮助解释某个估值指标。
 
 例如：
 
-```text
 ROE → PB
 ROE → PE
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  3.3 盈利质量验证
+3.3 盈利质量验证
 
 用于表示：
 
-> 某个指标可以用于验证企业盈利质量。
+某个指标可以用于验证企业盈利质量。
 
 例如：
 
-```text
 CASHFLOW → ROE
 CASHFLOW → PE
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  3.4 环境关联
+3.4 环境关联
 
 用于表示：
 
-> 宏观环境变量与企业或市场指标存在分析关联。
+宏观环境变量与企业或市场指标存在分析关联。
 
 例如：
 
-```text
 RATE → PE
 MACRO → PE
 MONETARY → RATE
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  3.5 市场行为验证
+3.5 市场行为验证
 
 用于表示：
 
-> 某个市场行为指标可以辅助验证另一个市场行为指标。
+某个市场行为指标可以辅助验证另一个市场行为指标。
 
 例如：
 
-```text
 VOLUME_PRICE → TREND
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  3.6 分析组合关系
+3.6 分析组合关系
 
 用于表示：
 
-> 两个概念通常需要组合使用，但不存在明确的因果方向。
+两个概念通常需要组合使用，但不存在明确的因果方向。
 
 例如：
 
-```text
 PE ↔ PB
 ROE ↔ CASHFLOW
 TREND ↔ VOLUME_PRICE
-```
 
----
+<<<DIFY_PARENT>>>
 
-##  4. ROE与PB
+4. ROE与PB
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-ROE-PB
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 ROE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PB
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 估值关联
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 ROE → PB
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 ROE反映企业使用股东资本创造利润的能力。
 
@@ -210,284 +197,275 @@ PB反映市场价格相对于企业账面净资产的水平。
 
 一般而言：
 
-> 企业资本回报能力是理解市场如何给净资产定价的重要因素之一。
+企业资本回报能力是理解市场如何给净资产定价的重要因素之一。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 当用户提出以下问题时，可以组合ROE和PB：
 
-* PB低是不是便宜？
-* PB高是不是贵？
-* 为什么两家公司PB差异很大？
-* 同行业公司PB为什么不同？
-* 高ROE企业为什么可能拥有更高PB？
+PB低是不是便宜？PB高是不是贵？为什么两家公司PB差异很大？同行业公司PB为什么不同？高ROE企业为什么可能拥有更高PB？
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 不能建立：
 
-```text
 ROE高 → PB一定高
-```
 
 也不能建立：
 
-```text
 ROE低 → PB一定低
-```
 
 PB还受到：
 
-* 盈利预期
-* 资产质量
-* 行业特征
-* 风险
-* 利率
-* 市场情绪
+盈利预期资产质量行业特征风险利率市场情绪
 
 等因素影响。
 
----
+<<<DIFY_PARENT>>>
 
-##  5. PB与ROE
+5. PB与ROE
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-PB-ROE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 PB
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 ROE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 估值解释
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 PB → ROE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 当用户询问PB是否具有意义时，需要进一步观察企业的ROE。
 
 相同PB水平对应的企业，如果资本回报能力不同，其估值含义可能不同。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 当问题以PB为入口时：
 
-```text
 用户问题
 ↓
 PB
 ↓
 检索ROE
-```
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 不能仅根据：
 
-```text
 PB低
-```
 
 判断：
 
-```text
 股票便宜。
-```
 
----
+<<<DIFY_PARENT>>>
 
-##  6. ROE与现金流
+6. ROE与现金流
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-ROE-CASHFLOW
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 ROE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 CASHFLOW
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 盈利质量验证
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 ROE → CASHFLOW
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 ROE反映企业资本回报能力。
 
 现金流可以帮助进一步判断：
 
-> 企业账面利润是否能够形成相应的现金流。
+企业账面利润是否能够形成相应的现金流。
 
 因此，ROE分析不能完全脱离现金流。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 当用户提出：
 
-* ROE很高是否代表企业很好？
-* ROE持续上升意味着什么？
-* 企业盈利能力是否真实？
-* 利润增长是否具有质量？
+ROE很高是否代表企业很好？ROE持续上升意味着什么？企业盈利能力是否真实？利润增长是否具有质量？
 
 可以组合：
 
-```text
 ROE
 +
 CASHFLOW
-```
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 不能建立：
 
-```text
 现金流下降 → ROE一定失真
-```
 
 现金流变化可能受到：
 
-* 应收账款
-* 存货
-* 预付款
-* 经营周期
-* 季节性
-* 行业周期
+应收账款存货预付款经营周期季节性行业周期
 
 等因素影响。
 
----
+<<<DIFY_PARENT>>>
 
-##  7. 现金流与ROE
+7. 现金流与ROE
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-CASHFLOW-ROE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 CASHFLOW
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 ROE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 盈利质量验证
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 CASHFLOW → ROE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 当现金流出现明显变化时，可以进一步观察ROE以及净利润变化。
 
 这样可以判断：
 
-> 企业盈利能力变化是否伴随着现金创造能力变化。
+企业盈利能力变化是否伴随着现金创造能力变化。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 例如：
 
-```text
 净利润 ↑
 ROE ↑
 经营现金流 ↓
-```
 
 此时应该进一步调查利润与现金流之间的背离原因。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 现金流与ROE不一致并不自动代表财务异常。
 
 必须结合具体业务和会计项目分析。
 
----
+<<<DIFY_PARENT>>>
 
-##  8. PE与ROE
+8. PE与ROE
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-PE-ROE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 PE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 ROE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 盈利能力关联
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 PE → ROE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 PE描述市场价格相对于盈利的倍数。
 
@@ -495,350 +473,350 @@ ROE描述企业资本回报能力。
 
 因此：
 
-> 分析PE时，可以结合ROE判断企业盈利能力。
+分析PE时，可以结合ROE判断企业盈利能力。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 适用于：
 
-* PE高不高？
-* PE低是不是便宜？
-* 两家公司PE为什么不同？
-* 高ROE公司为什么可能拥有更高估值？
+PE高不高？PE低是不是便宜？两家公司PE为什么不同？高ROE公司为什么可能拥有更高估值？
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 ROE不是决定PE的唯一因素。
 
 PE还受到：
 
-* 盈利增长
-* 盈利稳定性
-* 利率
-* 风险
-* 行业特征
-* 市场预期
+盈利增长盈利稳定性利率风险行业特征市场预期
 
 影响。
 
----
+<<<DIFY_PARENT>>>
 
-##  9. PE与现金流
+9. PE与现金流
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-PE-CASHFLOW
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 PE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 CASHFLOW
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 盈利质量验证
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 PE → CASHFLOW
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 PE使用企业盈利作为估值基础。
 
 现金流可以帮助判断：
 
-> 当前盈利是否具有较好的现金兑现能力。
+当前盈利是否具有较好的现金兑现能力。
 
 因此：
 
-> 当PE看起来较低时，应进一步检查盈利质量。
+当PE看起来较低时，应进一步检查盈利质量。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 例如：
 
-```text
 PE很低
 +
 经营现金流持续弱于净利润
-```
 
 此时不能只依据PE判断估值。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 现金流弱于净利润不自动意味着PE失效。
 
 需要分析产生差异的具体原因。
 
----
+<<<DIFY_PARENT>>>
 
-##  10. PB与现金流
+10. PB与现金流
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-PB-CASHFLOW
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 PB
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 CASHFLOW
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 资产与盈利质量辅助分析
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 PB → CASHFLOW
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 PB以净资产作为估值基础。
 
 现金流可以帮助分析：
 
-* 企业经营质量
-* 资产使用效率
-* 盈利兑现情况
+企业经营质量资产使用效率盈利兑现情况
 
 因此，PB分析可以结合现金流。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 尤其适用于：
 
-* 重资产企业
-* 资产型企业
-* PB明显偏低的企业
+重资产企业资产型企业PB明显偏低的企业
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 现金流不能直接决定PB。
 
 PB仍然需要结合：
 
-* ROE
-* 资产质量
-* 行业特征
-* 盈利能力
+ROE资产质量行业特征盈利能力
 
 进行分析。
 
----
+<<<DIFY_PARENT>>>
 
-##  11. PE与PB
+11. PE与PB
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-PE-PB
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 PE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PB
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 估值组合
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 PE ↔ PB
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 PE和PB都是估值指标，但观察角度不同。
 
 PE主要从：
 
-> 盈利
+盈利
 
 角度描述估值。
 
 PB主要从：
 
-> 净资产
+净资产
 
 角度描述估值。
 
 因此二者可以组合使用。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 当用户问：
 
-* 股票是否便宜？
-* 估值是否合理？
-* 为什么PE低但PB不低？
-* 为什么PB低但PE很高？
+股票是否便宜？估值是否合理？为什么PE低但PB不低？为什么PB低但PE很高？
 
 可以同时检索：
 
-```text
 PE
 PB
 ROE
-```
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 不能简单规定：
 
-```text
 PE低 + PB低 = 一定低估
-```
 
 估值需要结合企业质量、盈利能力和市场环境。
 
----
+<<<DIFY_PARENT>>>
 
-##  12. 利率与PE
+12. 利率与PE
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-RATE-PE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 RATE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 估值环境关联
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 RATE → PE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 利率是资产定价环境的重要变量。
 
 利率变化可能影响：
 
-* 资金成本
-* 资产吸引力
-* 风险偏好
-* 估值水平
+资金成本资产吸引力风险偏好估值水平
 
 因此，分析PE时可以结合利率环境。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 适用于：
 
-* 为什么市场PE整体发生变化？
-* 为什么利率变化会影响股票估值？
-* 当前估值环境是否发生变化？
+为什么市场PE整体发生变化？为什么利率变化会影响股票估值？当前估值环境是否发生变化？
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 不能建立：
 
-```text
 利率下降 → PE一定上涨
-```
 
 市场估值还受到盈利预期和风险偏好等因素影响。
 
----
+<<<DIFY_PARENT>>>
 
-##  13. PE与利率
+13. PE与利率
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-PE-RATE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 PE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 RATE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 估值环境解释
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 PE → RATE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 当PE发生明显变化时，可以进一步检查同期利率环境是否发生变化。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 用于：
 
-```text
 PE变化
 ↓
 检查利率环境
@@ -846,281 +824,290 @@ PE变化
 检查盈利预期
 ↓
 检查市场风险偏好
-```
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 PE变化不能归因于利率一个因素。
 
----
+<<<DIFY_PARENT>>>
 
-##  14. 货币政策与利率
+14. 货币政策与利率
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-MONETARY-RATE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 MONETARY
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 RATE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 政策环境关联
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 MONETARY → RATE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 货币政策与利率环境存在重要联系。
 
 分析利率变化时，可以检查货币政策环境。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 当用户询问：
 
-* 为什么利率变化？
-* 货币政策如何影响市场？
-* 宽松或收紧环境如何影响金融市场？
+为什么利率变化？货币政策如何影响市场？宽松或收紧环境如何影响金融市场？
 
 可以组合：
 
-```text
 MONETARY
 +
 RATE
-```
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 政策信号与市场实际利率变化之间可能存在时间差。
 
 政策变化也不一定立即完全传导到所有资产。
 
----
+<<<DIFY_PARENT>>>
 
-##  15. 宏观经济与货币政策
+15. 宏观经济与货币政策
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-MACRO-MONETARY
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 MACRO
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 MONETARY
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 政策背景关联
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 MACRO → MONETARY
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 货币政策通常需要结合宏观经济环境理解。
 
 宏观经济中的：
 
-* 增长
-* 通胀
-* 就业
-* 金融条件
+增长通胀就业金融条件
 
 可能影响政策环境。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 当用户询问：
 
-> 当前货币政策为什么发生变化？
+当前货币政策为什么发生变化？
 
 可以同时检索宏观经济和货币政策。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 不能简单建立：
 
-```text
 经济变差 → 一定宽松
-```
 
 实际政策还取决于多种因素。
 
----
+<<<DIFY_PARENT>>>
 
-##  16. 宏观经济与PE
+16. 宏观经济与PE
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-MACRO-PE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 MACRO
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 估值环境关联
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 MACRO → PE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 宏观环境会影响：
 
-* 企业盈利
-* 盈利预期
-* 利率环境
-* 市场风险偏好
+企业盈利盈利预期利率环境市场风险偏好
 
 这些因素又会影响估值环境。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 当用户问：
 
-> 为什么市场整体估值发生变化？
+为什么市场整体估值发生变化？
 
 可以从宏观环境开始分析。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 宏观环境不能直接决定PE。
 
----
+<<<DIFY_PARENT>>>
 
-##  17. 宏观经济与PB
+17. 宏观经济与PB
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-MACRO-PB
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 MACRO
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PB
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 资产定价环境关联
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 MACRO → PB
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 宏观经济环境会影响：
 
-* 企业盈利
-* 资本回报
-* 利率
-* 风险偏好
-* 资产定价
+企业盈利资本回报利率风险偏好资产定价
 
 因此可以影响PB所处的市场环境。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 宏观环境不能直接决定某一家企业的PB。
 
----
+<<<DIFY_PARENT>>>
 
-##  18. 趋势与量价关系
+18. 趋势与量价关系
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-TREND-VOLUME
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 TREND
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 VOLUME_PRICE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 市场行为验证
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 TREND ↔ VOLUME_PRICE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 趋势描述价格结构。
 
@@ -1128,130 +1115,133 @@ TREND ↔ VOLUME_PRICE
 
 两者结合可以帮助判断：
 
-> 当前价格运动是否获得成交量层面的支持。
+当前价格运动是否获得成交量层面的支持。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 尤其适用于：
 
-* 趋势突破
-* 支撑突破
-* 阻力突破
-* 放量上涨
-* 缩量上涨
-* 放量下跌
+趋势突破支撑突破阻力突破放量上涨缩量上涨放量下跌
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 量价关系只能作为辅助验证。
 
 不能建立：
 
-```text
 放量上涨 → 未来一定继续上涨
-```
 
----
+<<<DIFY_PARENT>>>
 
-##  19. 趋势与PE
+19. 趋势与PE
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-TREND-PE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 TREND
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 价格与估值组合
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 TREND ↔ PE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 趋势分析关注：
 
-> 市场价格如何运动。
+市场价格如何运动。
 
 PE分析关注：
 
-> 市场价格相对于盈利如何定价。
+市场价格相对于盈利如何定价。
 
 二者可以结合分析：
 
-> 价格变化是否伴随估值变化。
+价格变化是否伴随估值变化。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 例如：
 
-```text
 股价上涨
 +
 PE快速上升
-```
 
 可以进一步分析：
 
-> 股价上涨来自盈利增长还是估值扩张。
+股价上涨来自盈利增长还是估值扩张。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 趋势变化不能单独证明估值合理或不合理。
 
----
+<<<DIFY_PARENT>>>
 
-##  20. 趋势与PB
+20. 趋势与PB
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-TREND-PB
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 TREND
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PB
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 价格与估值组合
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 TREND ↔ PB
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 趋势描述市场价格结构。
 
@@ -1259,55 +1249,59 @@ PB描述市场价格相对于净资产的水平。
 
 二者结合可以观察：
 
-> 股价变化是否伴随PB变化。
+股价变化是否伴随PB变化。
 
-###  Usage
+<<<DIFY_CHILD>>>
+
+Usage
 
 适用于：
 
-* 股价上涨但PB明显扩大
-* 股价下跌但PB接近历史低位
-* 价格突破与估值变化同时出现
+股价上涨但PB明显扩大股价下跌但PB接近历史低位价格突破与估值变化同时出现
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 PB低不能直接作为趋势反转依据。
 
----
+<<<DIFY_PARENT>>>
 
-##  21. 量价与PE
+21. 量价与PE
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-VOLUME-PE
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 VOLUME_PRICE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PE
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 市场行为与估值组合
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 VOLUME_PRICE ↔ PE
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 量价关系反映市场交易行为。
 
@@ -1315,47 +1309,51 @@ PE反映市场对盈利的定价。
 
 二者结合可以帮助区分：
 
-> 价格变化来自估值变化还是其他市场行为。
+价格变化来自估值变化还是其他市场行为。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 成交量不能单独证明PE是否合理。
 
----
+<<<DIFY_PARENT>>>
 
-##  22. 量价与PB
+22. 量价与PB
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-VOLUME-PB
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 VOLUME_PRICE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PB
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 市场行为与估值组合
-```
 
-###  Direction
+<<<DIFY_CHILD>>>
 
-```text
+Direction
+
 VOLUME_PRICE ↔ PB
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 量价描述市场交易行为。
 
@@ -1363,222 +1361,223 @@ PB描述市场相对于净资产的定价。
 
 二者可以结合观察：
 
-> 价格变化与资产估值变化是否同步。
+价格变化与资产估值变化是否同步。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 成交量不能单独判断PB是否合理。
 
----
+<<<DIFY_PARENT>>>
 
-##  23. 综合关系：企业质量与估值
+23. 综合关系：企业质量与估值
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-QUALITY-VALUATION
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 ROE
 CASHFLOW
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PE
 PB
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 企业质量 → 估值解释
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 企业质量是理解估值的重要基础。
 
 其中：
 
-```text
 ROE
-```
 
 主要描述：
 
-> 资本回报能力。
+资本回报能力。
 
-```text
 CASHFLOW
-```
 
 主要描述：
 
-> 现金创造能力和利润兑现情况。
+现金创造能力和利润兑现情况。
 
-```text
 PE
-```
 
 主要描述：
 
-> 市场相对于盈利的定价。
+市场相对于盈利的定价。
 
-```text
 PB
-```
 
 主要描述：
 
-> 市场相对于净资产的定价。
+市场相对于净资产的定价。
 
 因此：
 
-> 企业质量、估值和现金流应当组合分析，而不是孤立使用单个指标。
+企业质量、估值和现金流应当组合分析，而不是孤立使用单个指标。
 
----
+<<<DIFY_PARENT>>>
 
-##  24. 综合关系：宏观环境与估值
+24. 综合关系：宏观环境与估值
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-MACRO-VALUATION
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 MACRO
 RATE
 MONETARY
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 PE
 PB
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 宏观环境 → 估值环境
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 宏观经济、利率和货币政策构成市场估值的重要外部环境。
 
 它们可能通过：
 
-```text
 经济增长
 盈利预期
 利率
 流动性
 风险偏好
-```
 
 影响估值环境。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 宏观环境不能单独决定个股估值。
 
----
+<<<DIFY_PARENT>>>
 
-##  25. 综合关系：市场行为
+25. 综合关系：市场行为
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-MARKET-BEHAVIOR
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 TREND
 VOLUME_PRICE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 MARKET_BEHAVIOR
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 市场行为描述
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 趋势和量价关系共同描述市场价格行为。
 
 趋势关注：
 
-> 价格结构。
+价格结构。
 
 量价关系关注：
 
-> 成交量与价格变化之间的关系。
+成交量与价格变化之间的关系。
 
 二者结合可以更完整地描述市场行为。
 
----
+<<<DIFY_PARENT>>>
 
-##  26. 综合关系：基本面、估值、技术
+26. 综合关系：基本面、估值、技术
 
-###  Relation ID
+<<<DIFY_CHILD>>>
 
-```text
+Relation ID
+
 REL-FUNDAMENTAL-VALUATION-TECHNICAL
-```
 
-###  Source
+<<<DIFY_CHILD>>>
 
-```text
+Source
+
 ROE
 CASHFLOW
 PE
 PB
 TREND
 VOLUME_PRICE
-```
 
-###  Target
+<<<DIFY_CHILD>>>
 
-```text
+Target
+
 综合市场分析
-```
 
-###  Relation
+<<<DIFY_CHILD>>>
 
-```text
+Relation
+
 企业质量
 →
 估值
 →
 市场行为
-```
 
-###  Meaning
+<<<DIFY_CHILD>>>
+
+Meaning
 
 这是一个分析框架，而不是严格因果链。
 
 三个层面分别回答：
 
-```text
 基本面：
 企业本身怎么样？
 
@@ -1587,165 +1586,141 @@ VOLUME_PRICE
 
 技术：
 市场目前如何交易？
-```
 
 因此，当用户提出复杂股票问题时，可以分别从三个层面分析。
 
-###  Caution
+<<<DIFY_CHILD>>>
+
+Caution
 
 三个层面的结论可能互相矛盾。
 
 例如：
 
-```text
 企业质量良好
 +
 估值较高
 +
 技术趋势走弱
-```
 
 这不是知识冲突。
 
 而是：
 
-> 不同分析维度描述了不同事实。
+不同分析维度描述了不同事实。
 
 LLM不应强行把三个维度统一成一个结论。
 
----
+<<<DIFY_PARENT>>>
 
-##  27. 重要的负向关系
+27. 重要的负向关系
 
 金融知识库不仅需要知道：
 
-> 什么可以组合。
+什么可以组合。
 
 还需要知道：
 
-> 什么不能直接推导。
+什么不能直接推导。
 
 以下关系明确禁止机械推理。
 
----
+<<<DIFY_CHILD>>>
 
-###  27.1 PE低不能推出便宜
+27.1 PE低不能推出便宜
 
-```text
 错误推理：
 
 PE低
 →
 股票便宜
-```
 
 正确关系：
 
-```text
 PE低
 →
 需要进一步分析盈利质量、增长、周期、风险和市场预期
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  27.2 PB低不能推出便宜
+27.2 PB低不能推出便宜
 
-```text
 错误推理：
 
 PB低
 →
 股票便宜
-```
 
 正确关系：
 
-```text
 PB低
 →
 需要结合ROE、资产质量、盈利能力和行业特征分析
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  27.3 ROE高不能推出企业优秀
+27.3 ROE高不能推出企业优秀
 
-```text
 错误推理：
 
 ROE高
 →
 企业优秀
-```
 
 正确关系：
 
-```text
 ROE高
 →
 资本回报能力较高
 →
 进一步检查持续性、杠杆、现金流和竞争优势
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  27.4 现金流差不能推出企业一定有问题
+27.4 现金流差不能推出企业一定有问题
 
-```text
 错误推理：
 
 现金流下降
 →
 企业有问题
-```
 
 正确关系：
 
-```text
 现金流下降
 →
 检查经营周期、应收账款、存货、行业特征和持续时间
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  27.5 放量上涨不能推出未来继续上涨
+27.5 放量上涨不能推出未来继续上涨
 
-```text
 错误推理：
 
 放量上涨
 →
 未来继续上涨
-```
 
 正确关系：
 
-```text
 放量上涨
 →
 当前市场参与程度增加
 →
 结合趋势结构和后续价格行为继续观察
-```
 
----
+<<<DIFY_CHILD>>>
 
-###  27.6 突破不能推出一定成功
+27.6 突破不能推出一定成功
 
-```text
 错误推理：
 
 价格突破
 →
 趋势一定延续
-```
 
 正确关系：
 
-```text
 价格突破
 →
 观察突破后的价格行为
@@ -1753,15 +1728,13 @@ ROE高
 结合成交量验证
 →
 判断突破是否有效
-```
 
----
+<<<DIFY_PARENT>>>
 
-##  28. 关系使用优先级
+28. 关系使用优先级
 
 当用户提出复杂问题时，可以按照以下顺序组合知识：
 
-```text
 第一优先级：
 直接相关概念
 
@@ -1773,63 +1746,44 @@ ROE高
 
 第四优先级：
 用于交叉验证的市场行为概念
-```
 
 例如：
 
-> “PE只有8倍，但股价最近一直下跌，为什么？”
+“PE只有8倍，但股价最近一直下跌，为什么？”
 
 第一优先级：
 
-```text
 PE
 TREND
-```
 
 第二优先级：
 
-```text
 ROE
 CASHFLOW
-```
 
 第三优先级：
 
-```text
 RATE
 MACRO
-```
 
 第四优先级：
 
-```text
 VOLUME_PRICE
-```
 
----
+<<<DIFY_PARENT>>>
 
-##  29. LLM关系解释规范
+29. LLM关系解释规范
 
 LLM读取本文时，应遵循以下规则：
 
-1. `source → target`表示分析关联，不自动表示因果关系。
-2. `↔`表示两个概念适合组合分析。
-3. `relation`描述为什么需要组合两个概念。
-4. `usage`描述什么情况下应该调用该关系。
-5. `caution`描述该关系容易产生的错误推理。
-6. 不得仅根据关系本身生成投资结论。
-7. 具体金融事实必须优先来自具体知识文件。
-8. 当多个知识模块发生冲突时，不应强行消除冲突。
-9. 不同指标描述不同维度，指标之间可以互补，也可以出现背离。
-10. 发现背离时，应将其作为进一步分析的入口，而不是直接作为结论。
+source → target表示分析关联，不自动表示因果关系。↔表示两个概念适合组合分析。relation描述为什么需要组合两个概念。usage描述什么情况下应该调用该关系。caution描述该关系容易产生的错误推理。不得仅根据关系本身生成投资结论。具体金融事实必须优先来自具体知识文件。当多个知识模块发生冲突时，不应强行消除冲突。不同指标描述不同维度，指标之间可以互补，也可以出现背离。发现背离时，应将其作为进一步分析的入口，而不是直接作为结论。
 
----
+<<<DIFY_PARENT>>>
 
-##  30. 核心关系摘要
+30. 核心关系摘要
 
 当前金融知识库最重要的关系可以压缩为：
 
-```text
 ROE
 → PB
 关系：估值解释
@@ -1877,21 +1831,17 @@ TREND
 TREND
 ↔ PB
 关系：价格与估值组合
-```
 
----
+<<<DIFY_PARENT>>>
 
-##  31. 核心思想
+31. 核心思想
 
 金融知识之间不是简单的：
 
-```text
 A → B → C
-```
 
 而更接近：
 
-```text
 概念
 +
 关联概念
@@ -1901,16 +1851,13 @@ A → B → C
 交叉验证
 +
 知识边界
-```
 
 因此，本知识库采用：
 
-> **“概念 + 关系 + 使用场景 + 边界”**
+“概念 + 关系 + 使用场景 + 边界”
 
 而不是：
 
-> **“指标 + 单一结论”**
+“指标 + 单一结论”
 
 作为LLM进行金融分析时的基础知识结构。
-
-```
