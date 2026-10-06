@@ -237,7 +237,7 @@ Classifier 的任务只是判断：
 
 不要因为问题存在轻微的自然语言模糊，就自动设置：
 
-needs_clarification = "true"
+needs_clarification = true
 
 只有当缺失的信息：
 
@@ -247,7 +247,7 @@ needs_clarification = "true"
 
 才需要设置：
 
-needs_clarification = "true"
+needs_clarification = true
 
 
 例如：
@@ -260,7 +260,7 @@ needs_clarification = "true"
 
 因此：
 
-needs_clarification = "false"
+needs_clarification = false
 
 
 而：
@@ -276,7 +276,7 @@ needs_clarification = "false"
 
 存在实质性歧义时，才考虑：
 
-needs_clarification = "true"
+needs_clarification = true
 
 
 ==================================================
@@ -596,6 +596,7 @@ needs_clarification = true
 十四、输出要求
 ==================================================
 
+needs_knowledge,needs_clarification,needs_financial_data,needs_macro_data,needs_market_data这几个字段的类型必须是布尔值，禁止"true"/"false"这种字符串
 必须严格输出以下结构：
 
 {
